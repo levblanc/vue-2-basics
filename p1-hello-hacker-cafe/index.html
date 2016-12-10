@@ -1,0 +1,41 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+    <title>Hacker Cafe</title>
+</head>
+
+<body>
+    <!-- vue对象绑定的元素 -->
+    <div id="app">
+        <!-- 直接放入数据对应的key -->
+        <h1>{{ info }}</h1>
+
+        <!-- 正确写法 -->
+        <!-- <h2>{{ info.concat('!!!') }}</h2> -->
+        <!-- <h2>{{ info.length }}</h2> -->
+        <!-- <h2>{{ info ? 'has info' : 'no info'}}</h2> -->
+
+        <!-- 错误写法 -->
+        <!-- <h2>{{ var ok = 1 }}</h2> -->
+        <!-- <h2>{{ if (ok) { return info } }}</h2> -->
+    </div>
+
+    <script src="../static/js/vue.js" charset="utf-8"></script>
+
+    <script type="text/javascript">
+        var app = new Vue({
+            // 绑定html元素
+            el: '#app',
+            // 绑定数据
+            data: {
+                info: 'hello hacker cafe'
+            }
+        });
+    </script>
+</body>
+
+</html>
