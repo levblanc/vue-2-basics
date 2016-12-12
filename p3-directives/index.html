@@ -33,18 +33,16 @@
     <script src="../static/js/vue.js" charset="utf-8"></script>
 
     <script type="text/javascript">
-        setTimeout(function () {
-            var app = new Vue({
-                el: '#app',
-                data: {
-                    info: 'hello hacker cafe',
-                    html: '<small>this is rendered with v-html</small>',
-                    status: 'loading',
-                    showHeader: true,
-                    once: 'I am rendered only once'
-                }
-            });
-        }, 2048)
+        var app = new Vue({
+            el: '#app',
+            data: {
+                info: 'hello hacker cafe',
+                html: '<small>this is rendered with v-html</small>',
+                status: 'loading',
+                showHeader: true,
+                once: 'I am rendered only once'
+            }
+        });
     </script>
 </body>
 
