@@ -21,6 +21,7 @@
 
         <!-- <button :style="{ color: 'white', backgroundColor: 'blue' }">I am a button</button> -->
 
+        <!-- 根据数据中isSuccess来决定是否把success这个class加给元素 -->
         <!-- <button class="btn" :class="{ success: isSuccess }">I am a button</button> -->
 
         <!-- <button class="btn" :class="cssData">I am a button</button> -->
@@ -37,6 +38,9 @@
                 imgTitle: 'this is the img title',
                 isSuccess: true,
                 cssData : {
+                    // 这里只是一个简单的例子
+                    // 实际中肯定是通过从接口获取回来的数据
+                    // 来判断到底是true还是false
                     success: true
                 }
             }
