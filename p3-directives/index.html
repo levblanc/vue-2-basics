@@ -26,8 +26,8 @@
 
         <!-- <h1 v-show="showHeader">{{ info }}</h1> -->
 
-        <!-- <div class="alert alert-danger" v-once>{{ once }}</div>
-        <div class="alert alert-info" v-text>{{ once }}</div> -->
+        <!-- <div class="alert alert-danger" v-once>v-once: {{ once }}</div>
+        <div class="alert alert-info" v-text>v-text: {{ once }}</div> -->
     </div>
 
     <script src="../static/js/vue.js" charset="utf-8"></script>
@@ -37,10 +37,10 @@
             el: '#app',
             data: {
                 info: 'hello hacker cafe',
-                html: '<small>this is rendered with v-html</small>',
+                html: '<small>使用v-html渲染</small>',
                 status: 'loading',
                 showHeader: true,
-                once: 'I am rendered only once'
+                once: '遵命主人，只渲染一次'
             }
         });
     </script>
