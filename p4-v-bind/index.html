@@ -19,12 +19,12 @@
     <div id="app">
         <img :src="imgSrc" :alt="imgAlt" :title="imgTitle">
 
-        <!-- <button :style="{ color: 'white', backgroundColor: 'blue' }">I am a button</button> -->
+        <!-- <button class="btn" :style="{ color: 'white', backgroundColor: 'blue' }">点击我吧，主人！</button> -->
 
         <!-- 根据数据中isSuccess来决定是否把success这个class加给元素 -->
-        <!-- <button class="btn" :class="{ success: isSuccess }">I am a button</button> -->
+        <!-- <button class="btn" :class="{ success: isSuccess }">点击我吧，主人！</button> -->
 
-        <!-- <button class="btn" :class="cssData">I am a button</button> -->
+        <!-- <button class="btn" :class="cssData">点击我吧，主人！</button> -->
     </div>
 
     <script src="../static/js/vue.js" charset="utf-8"></script>
@@ -33,9 +33,9 @@
         var app = new Vue({
             el: '#app',
             data: {
-                imgSrc: 'https://cn.vuejs.org/images/logo.png',
+                imgSrc: 'https://vuejs.org/images/logo.png',
                 imgAlt: 'vue-logo',
-                imgTitle: 'this is the img title',
+                imgTitle: '这是你指定的title，主人',
                 isSuccess: true,
                 cssData : {
                     // 这里只是一个简单的例子
