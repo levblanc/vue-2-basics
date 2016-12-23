@@ -13,6 +13,7 @@
     <div id="app">
         <div class="container">
             <div class="page-header">
+                <!-- <h2>data.myCash: {{ showCash() }}</h2> -->
                 <h2 class="myCash">我的余额：HK$ {{ myBalance.toFixed(2) }}</h2>
             </div>
             <div class="wishList col-md-6">
@@ -55,10 +56,14 @@
             methods: {
                 buyGame: function (id) {
                     this.games[id].purchased = true
+                },
+                showCash: function () {
+                    console.log('showCash in methods')
+                    return this.myCash
                 }
             },
             computed: {
-                myBalance: function (id) {
+                myBalance: function () {
                     var sum = 0
                     this.myGames.forEach(function (item, index) {
                         sum += parseFloat(item.price)
@@ -74,7 +79,11 @@
                     return this.games.filter(function (game) {
                         return game.purchased
                     })
-                }
+                },
+                // showCash: function () {
+                //     console.log('showCash in computed properties')
+                //     return this.myCash
+                // }
             }
         });
     </script>
