@@ -10,8 +10,9 @@
 </head>
 
 <style>
-    .success {
-        background-color: red;
+    .is-active {
+        color: white;
+        background-color: green;
     }
 </style>
 
@@ -21,10 +22,8 @@
 
         <!-- <button class="btn" :style="{ color: 'white', backgroundColor: 'blue' }">点击我吧，主人！</button> -->
 
-        <!-- 根据数据中isSuccess来决定是否把success这个class加给元素 -->
-        <!-- <button class="btn" :class="{ success: isSuccess }">点击我吧，主人！</button> -->
-
-        <!-- <button class="btn" :class="cssData">点击我吧，主人！</button> -->
+        <!-- 根据数据中isActive来决定是否把is-active这个class加给元素 -->
+        <button class="btn" :class="{ 'is-active': isActive }">点击我吧，主人！</button>
     </div>
 
     <script src="../static/js/vue.js" charset="utf-8"></script>
@@ -36,13 +35,10 @@
                 imgSrc: 'https://vuejs.org/images/logo.png',
                 imgAlt: 'vue-logo',
                 imgTitle: '这是你指定的title，主人',
-                isSuccess: true,
-                cssData : {
-                    // 这里只是一个简单的例子
-                    // 实际中肯定是通过从接口获取回来的数据
-                    // 来判断到底是true还是false
-                    success: true
-                }
+                // 这里只是一个简单的例子
+                // 实际中肯定是通过从接口获取回来的数据，或者用户交互
+                // 来判断到底是true还是false
+                isActive: true
             }
         });
     </script>
