@@ -18,27 +18,23 @@
             </div>
             <div class="wishList col-md-6">
                 <h3>愿望清单：</h3>
-                <ul class="list-group">
-                    <li class="list-group-item gameItem" v-for="item in wishList">
-                        <img :src="item.img">
-                        <div class="gameInfo">
-                            <h2 class="name">{{ item.name }}</h2>
-                            <p class="price">HK$ {{ item.price.toFixed(2) }}</p>
-                            <button class="btn btn-danger btn-lg" @click="buyGame(item.id)">立即购买</button>
-                        </div>
-                    </li>
-                </ul>
+                <div class="gameItem" v-for="item in wishList">
+                    <img :src="item.img">
+                    <div class="gameInfo">
+                        <h2 class="name">{{ item.name }}</h2>
+                        <p class="price">HK$ {{ item.price.toFixed(2) }}</p>
+                        <button class="btn btn-danger btn-lg" @click="buyGame(item.id)">立即购买</button>
+                    </div>
+                </div>
             </div>
             <div class="purchasedGames col-md-6">
                 <h3>已入游戏：</h3>
-                <ul class="list-group">
-                    <li class="list-group-item gameItem" v-for="item in myGames">
-                        <img :src="item.img">
-                        <div class="gameInfo">
-                            <h2 class="name">{{ item.name }}</h2>
-                        </div>
-                    </li>
-                </ul>
+                <div class="gameItem" v-for="item in myGames">
+                    <img :src="item.img">
+                    <div class="gameInfo">
+                        <h2 class="name">{{ item.name }}</h2>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -66,7 +62,7 @@
                 myBalance: function () {
                     var sum = 0
                     this.myGames.forEach(function (item, index) {
-                        sum += parseFloat(item.price)
+                        sum += item.price
                     })
                     return this.myCash - sum
                 },

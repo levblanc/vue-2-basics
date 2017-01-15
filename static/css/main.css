@@ -15,7 +15,22 @@ body {
 }
 
 .gameItem {
+    padding: 15px;
+    border-top: 1px solid #eee;
+    border-left: 1px solid #eee;
+    border-right: 1px solid #eee;
     overflow: hidden;
+}
+
+.gameItem:nth-child(2) {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.gameItem:last-child {
+    border-bottom: 1px solid #eee;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 
 .gameItem img {
