@@ -1,0 +1,41 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/css/main.css">
+    <title>大家的VueJS 2.0</title>
+</head>
+
+<body>
+    <div id="app">
+        <!-- <div class="btn-group btn-group-justified" role="group">
+          <div class="btn-group" role="group">
+            <button type="button" class="btn btn-info">商品详情</button>
+          </div>
+          <div class="btn-group" role="group">
+            <button type="button" class="btn btn-default">商家信息</button>
+          </div>
+        </div>
+
+        <div class="page-details">
+
+        </div> -->
+
+        <page-nav>
+            <page name="商品详情" link="detail" active="true">
+                <h4>这里是商品详情</h4>
+            </page>
+            <page name="商家信息" link="info">
+                <h4>这里是商家信息</h4>
+            </page>
+        </page-nav>
+    </div>
+
+    <script src="../static/js/vue.js" charset="utf-8"></script>
+    <script src="pageNav.js" charset="utf-8"></script>
+</body>
+
+</html>

@@ -11,13 +11,48 @@
 
 <body>
     <div id="app">
-        <!-- <game-item></game-item> -->
-        <game-list></game-list>
+        <h4>最简单的组件</h4>
+        <one></one>
+
+        <!-- <h4>从数据获取内容</h4>
+        <two></two> -->
+
+        <!-- <h4>在HTML中定义组件内容</h4>
+        <three>item1</three>
+        <three>item2</three>
+        <three>item3</three> -->
+
+        <!-- <h4>默认内容 vs 自定义内容</h4>
+        <four></four>
+        <four>这是自定义的内容</four> -->
+
+        <!-- <h4>具名slot/使用template tag</h4>
+        <five>
+            <ul slot="header" class="nav nav-tabs">
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="#">Profile</a></li>
+              <li><a href="#">Messages</a></li>
+            </ul>
+
+            <div slot="content">this is my awesome website</div>
+            <template slot="content">this is my awesome website</template>
+        </five> -->
+
+        <!-- <h4>自定义组件属性</h4>
+        <six user-name="john"></six> -->
+
+        <!-- <h4>v-bind绑定自定义属性</h4>
+        <input type="text" v-model="inputMsg" />
+        </br>
+        <six :user-name="inputMsg"></six> -->
+
+        <!-- <h4>组件嵌套</h4>
+        <game-list></game-list> -->
     </div>
 
     <script src="../static/js/vue.js" charset="utf-8"></script>
     <script src="../static/js/gamesDB.js" charset="utf-8"></script>
-    <script src="./main.js" charset="utf-8"></script>
+    <script src="main.js" charset="utf-8"></script>
 </body>
 
 </html>

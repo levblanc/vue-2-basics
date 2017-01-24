@@ -9,7 +9,7 @@ body {
     margin-bottom: 20px;
 }
 
-/* p6 computed properties start */
+/* p6 computed properties */
 .myCash {
     color: orange;
 }
@@ -47,4 +47,11 @@ body {
 .gameItem .gameInfo .price {
     font-size: 18px;
     font-weight: bold;
+}
+
+/* p8 component communication */
+.boxWrapper {
+    padding: 20px;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
 }
