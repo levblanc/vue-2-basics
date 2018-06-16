@@ -11,7 +11,8 @@
 
 <body>
     <div id="app">
-        <input class="text-input" type="text" v-model="info">
+        <input class="text-input" type="text" :value="infotest" v-model="info">
+        <!-- <input class="text-input" type="text" v-model="info"> -->
         <div class="alert alert-info">{{ info }}</div>
     </div>
 
@@ -21,7 +22,8 @@
         var app = new Vue({
             el: '#app',
             data: {
-                info: 'hello hacker cafe'
+                info: 'hello hacker cafe',
+                infotest: 'heeeeeeeeeeeeeello hacker cafe'
             }
         });
     </script>

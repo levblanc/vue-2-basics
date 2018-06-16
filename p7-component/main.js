@@ -38,8 +38,8 @@ Vue.component('five', {
 // Step 6
 Vue.component('six', {
     props: ['userName'],
-    // template: '<li>{{ userName }}</li>',
-    template: '<li>{{ uppercaseName }}</li>',
+    template: '<li>{{ userName }}</li>',
+    // template: '<li>{{ uppercaseName }}</li>',
     computed: {
         uppercaseName: function() {
             return this.userName.trim().toUpperCase()

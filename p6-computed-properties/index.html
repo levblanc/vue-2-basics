@@ -12,8 +12,10 @@
 <body>
     <div id="app">
         <div class="container">
+                <h1>{{ testObj.key }}</h1>
+                <h1>{{ testFunc() }}</h1>
+                <h2>data.myCash: {{ showCash() }}</h2>
             <div class="page-header">
-                <!-- <h2>data.myCash: {{ showCash() }}</h2> -->
                 <h2 class="myCash">我的余额：HK$ {{ myBalance.toFixed(2) }}</h2>
             </div>
             <div class="wishList col-md-6">
@@ -24,6 +26,7 @@
                         <h2 class="name">{{ item.name }}</h2>
                         <p class="price">HK$ {{ item.price.toFixed(2) }}</p>
                         <button class="btn btn-danger btn-lg" @click="buyGame(item.id)">立即购买</button>
+                        <!-- <button class="btn btn-danger btn-lg">立即购买</button> -->
                     </div>
                 </div>
             </div>
@@ -47,10 +50,17 @@
             el: '#app',
             data: {
                 games: window.games,
-                myCash: 5000
+                myCash: 5000,
+                testObj: {key: 'value'},
+                myKey : 'myValue'
             },
             methods: {
+                testFunc: function () {
+                    console.log('test function in methods')
+                    // return 'test string'
+                },
                 buyGame: function (id) {
+                    console.log('buy game ???')
                     this.games[id].purchased = true
                 },
                 showCash: function () {
